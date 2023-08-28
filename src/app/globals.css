@@ -105,6 +105,10 @@ body {
 .banner-image img {
   border-bottom-right-radius: 34%;
   border-bottom-left-radius: 34%;
+  width: 70%;
+  aspect-ratio: 1/1.2;
+  height: 100%;
+  object-fit: cover;
 }
 
 .banner-main {
@@ -607,12 +611,14 @@ section.perfect-loan p {
 }
 .contact-box {
   border-radius: 30px;
-  background: #EFC2C4;
+  background: url('/contact-bg.svg') no-repeat top -57px center;
+  background-size: 110%;
+  background-color: #EFC2C4;
   text-align: center;
   padding: 40px 15px;
 }
 
-.contact-box h3 {
+.contact-box h3 a{
   color: #C42128;
   font-family: Judson;
   font-size: 40px;
@@ -620,6 +626,7 @@ section.perfect-loan p {
   font-weight: 700;
   line-height: normal;
   text-decoration-line: underline;
+  text-decoration: none;
 }
 .contact-box p {
   color: #282828;

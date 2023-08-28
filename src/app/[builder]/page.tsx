@@ -95,8 +95,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                            
 <img
   src={process.env.NEXT_PUBLIC_BASE_LIVE_URL + `storage/${data?.msg?.builder?.details?.banner_image}`}
-  width={398}
-  height={520}
+  
   alt="Banner Image"
 />
                           </div>
@@ -441,7 +440,9 @@ return(
                       affect your credit score.</p>
                       <button type="button" className="btn btn-login-btn">Compare Loan</button>
                   </div>
-                  <div className='col-12 col-md-6'>sdfs</div>
+                  <div className='col-12 col-md-6'>
+                    <img src={'/perfect-loan.svg'} />
+                  </div>
                 </div>
               </div>
             </div>
@@ -469,6 +470,7 @@ return(
             <div className='row'>
               <div className='col-12 col-md-3'>
                 <div className='footer-box'>
+                  <a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL} target='_blank'><Image src="/logo.png" width={134} height={63} alt='logo-image'></Image></a>
                   <p>We’re reimagining how you buy, sell and rent. It’s now easier to get into a place 
                     you love. So let’s do this, together</p>
                 </div>
