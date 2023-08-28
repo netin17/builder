@@ -86,7 +86,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                             <Image src={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`storage/${data?.msg?.builder?.details?.banner_image}`} width={398} height={520} alt="Vercel Logo" />
                           </div>
                           <div className='flexable-living'>
-                            <span><Image src={'/icon-park-solid_building-two.svg'} alt="Vercel Logo" /></span>
+                            <span><img src={'/icon-park-solid_building-two.svg'} alt="Vercel Logo" /></span>
                             <div className='flexable-living-con'>
                               <p>Flexible Living</p>
                               <h6>{data?.msg?.builder?.details?.total_flexible_living} Properties</h6>
@@ -107,8 +107,8 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
 
         <section className='quote-sec'>
           <div className='container'>
-          <h2>We offer a variety of <Image src={'/quote2.svg'} alt="Vercel Logo" /> properties, including houses, 
-                  apartments, and land <Image src={'/quote1.svg'} alt="Vercel Logo" /> also, provide personalized service.</h2>
+          <h2>We offer a variety of <img src={'/quote2.svg'} alt="Vercel Logo" /> properties, including houses, 
+                  apartments, and land <img src={'/quote1.svg'} alt="Vercel Logo" /> also, provide personalized service.</h2>
           </div>
         </section>
 
@@ -125,7 +125,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
               <div className='col-12 col-md-4'>
                 <div className='service-box'>
                   <div className='service-box-img'>
-                    <Image src={'/architectural-services.svg'} alt="Vercel Logo" />
+                    <img src={'/architectural-services.svg'} alt="Vercel Logo" />
                   </div>
                   <div className='service-box-con'>
                     <h5>Architectural Services</h5>
@@ -138,7 +138,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
               <div className='col-12 col-md-4'>
                 <div className='service-box'>
                   <div className='service-box-img'>
-                    <Image src={'/contract-negotiation.svg'} alt="Vercel Logo" />
+                    <img src={'/contract-negotiation.svg'} alt="Vercel Logo" />
                   </div>
                   <div className='service-box-con'>
                     <h5>Contract Negotiation</h5>
@@ -151,7 +151,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
               <div className='col-12 col-md-4'>
                 <div className='service-box'>
                   <div className='service-box-img'>
-                    <Image src={'/environmental-graphics.svg'} alt="Vercel Logo" />
+                    <img src={'/environmental-graphics.svg'} alt="Vercel Logo" />
                   </div>
                   <div className='service-box-con'>
                     <h5>Environmental Graphics</h5>
@@ -182,7 +182,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                 {data?.msg?.builder?.cards?.map((card:any)=>{
                   return(
                     <li key={card?.id}>
-                    <Image src={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`storage/${card?.card?.thumbnail}`} alt="Vercel Logo" />
+                    <img src={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`storage/${card?.card?.thumbnail}`} alt="Vercel Logo" />
                     <span><i>{card?.city?.name}</i></span>
                   </li>
                   )
@@ -253,7 +253,7 @@ return(
       <a href="#">
         <div className="properties_box_img">
 {property?.property?.images.length>0 && 
-  <Image src={property?.property?.images[0]?.url} alt="Vercel Logo" />
+  <img src={property?.property?.images[0]?.url} alt="Vercel Logo" />
 }
           
 
