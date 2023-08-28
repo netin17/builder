@@ -83,10 +83,10 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                     <div className='col-12 col-md-6'>
                         <div className='banner-image-outer'>
                           <div className='banner-image'>
-                            <img src={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`storage/${data?.msg?.builder?.details?.banner_image}`} width={`398px`} height={`502px`} />
+                            <Image src={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`storage/${data?.msg?.builder?.details?.banner_image}`} width={398} height={520} alt="Vercel Logo" />
                           </div>
                           <div className='flexable-living'>
-                            <span><img src={'/icon-park-solid_building-two.svg'} /></span>
+                            <span><Image src={'/icon-park-solid_building-two.svg'} alt="Vercel Logo" /></span>
                             <div className='flexable-living-con'>
                               <p>Flexible Living</p>
                               <h6>{data?.msg?.builder?.details?.total_flexible_living} Properties</h6>
@@ -107,8 +107,8 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
 
         <section className='quote-sec'>
           <div className='container'>
-          <h2>We offer a variety of <img src={'/quote2.svg'} /> properties, including houses, 
-                  apartments, and land <img src={'/quote1.svg'} /> also, provide personalized service.</h2>
+          <h2>We offer a variety of <Image src={'/quote2.svg'} alt="Vercel Logo" /> properties, including houses, 
+                  apartments, and land <Image src={'/quote1.svg'} alt="Vercel Logo" /> also, provide personalized service.</h2>
           </div>
         </section>
 
@@ -125,7 +125,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
               <div className='col-12 col-md-4'>
                 <div className='service-box'>
                   <div className='service-box-img'>
-                    <img src={'/architectural-services.svg'} />
+                    <Image src={'/architectural-services.svg'} alt="Vercel Logo" />
                   </div>
                   <div className='service-box-con'>
                     <h5>Architectural Services</h5>
@@ -138,7 +138,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
               <div className='col-12 col-md-4'>
                 <div className='service-box'>
                   <div className='service-box-img'>
-                    <img src={'/contract-negotiation.svg'} />
+                    <Image src={'/contract-negotiation.svg'} alt="Vercel Logo" />
                   </div>
                   <div className='service-box-con'>
                     <h5>Contract Negotiation</h5>
@@ -151,7 +151,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
               <div className='col-12 col-md-4'>
                 <div className='service-box'>
                   <div className='service-box-img'>
-                    <img src={'/environmental-graphics.svg'} />
+                    <Image src={'/environmental-graphics.svg'} alt="Vercel Logo" />
                   </div>
                   <div className='service-box-con'>
                     <h5>Environmental Graphics</h5>
@@ -182,7 +182,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                 {data?.msg?.builder?.cards?.map((card:any)=>{
                   return(
                     <li key={card?.id}>
-                    <img src={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`storage/${card?.card?.thumbnail}`} />
+                    <Image src={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`storage/${card?.card?.thumbnail}`} alt="Vercel Logo" />
                     <span><i>{card?.city?.name}</i></span>
                   </li>
                   )
@@ -214,7 +214,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
         <section className='project-sec'>
         {data?.msg?.builder?.cards?.map((card:any)=>{
            return(
-            <>
+            <div key={card?.id}>
             {card?.builder_card_property?.length> 0 &&
             <div className='container py-3 py-md-5'>
             <div className='project-sec-header'>
@@ -248,12 +248,12 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
           >
 {card?.builder_card_property?.map((property:any)=>{
 return(
-  <SwiperSlide>
+  <SwiperSlide key={property?.id}>
   <div className="properties_box">
       <a href="#">
         <div className="properties_box_img">
 {property?.property?.images.length>0 && 
-  <img src={property?.property?.images[0]?.url} />
+  <Image src={property?.property?.images[0]?.url} alt="Vercel Logo" />
 }
           
 
@@ -291,7 +291,7 @@ return(
           <ul>
             {property?.property?.amenities?.map((aminity:any)=>{
               return (
-                  <li>{aminity?.amenity_data?.name}</li>
+                  <li key={aminity?.id}>{aminity?.amenity_data?.name}</li>
               )
             })}
             
@@ -407,7 +407,7 @@ return(
           </Swiper>
           </div>
             }
-            </>
+            </div>
             
 
            ) 
@@ -422,7 +422,7 @@ return(
                 <div className='row g-3'>
                   <div className='col-12 col-md-6'>
                     <h3>Find The Perfect Loan For You</h3>
-                    <p>Find your cheapest loan in minutes then click to apply instantly. It's free and won't 
+                    <p>Find your cheapest loan in minutes then click to apply instantly. It&apos;s free and won&apos;t 
                       affect your credit score.</p>
                       <button type="button" className="btn btn-login-btn">Compare Loan</button>
                   </div>
