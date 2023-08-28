@@ -34,7 +34,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
   function formatPrice(price:number) {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'INR',
     }).format(price);
   }
   
@@ -311,7 +311,7 @@ return(
             })}
             
           </ul>
-          <div className="properties_price">₹ {formatPrice(property?.property?.property_details?.price)}</div>
+          <div className="properties_price">{formatPrice(property?.property?.property_details?.price)}</div>
         </div>
           }
           
