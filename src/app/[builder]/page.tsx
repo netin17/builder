@@ -83,7 +83,13 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                     <div className='col-12 col-md-6'>
                         <div className='banner-image-outer'>
                           <div className='banner-image'>
-                            <img src={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`storage/${data?.msg?.builder?.details?.banner_image}`} width={398} height={520} alt="Vercel Logo" />
+                           
+<Image
+  src={process.env.NEXT_PUBLIC_BASE_LIVE_URL + `storage/${data?.msg?.builder?.details?.banner_image}`}
+  width={398}
+  height={520}
+  alt="Banner Image"
+/>
                           </div>
                           <div className='flexable-living'>
                             <span><img src={'/icon-park-solid_building-two.svg'} alt="Vercel Logo" /></span>
