@@ -1,11 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import axios from 'axios';
 
-type User = {
-  id: number;
-  name: string;
-  email: number;
-};
+type Builder = any;
 
 // Define the custom base query function using Axios
 const axiosBaseQuery = ({ baseUrl }: { baseUrl: string }) => async ({ url, method, data }: { url: string, method: string, data?: any }) => {
@@ -25,22 +21,16 @@ export const builderApi = createApi({
   reducerPath: 'builderApi',
   refetchOnFocus: true,
   baseQuery: axiosBaseQuery({
-    baseUrl: 'https://jsonplaceholder.typicode.com/',
+    baseUrl: process.env.NEXT_PUBLIC_BASE_URL!,
   }),
   endpoints: (builder) => ({
-    getUsers: builder.query<User[], null>({
-      query: () => ({
-        url: 'users', // Corrected: Return query object instead of string
+    getBuilder: builder.query<Builder, {slug:string}>({
+      query: ({slug}) => ({
+        url: `builder/${slug}`, // Corrected: Return query object instead of string
         method: 'GET',
       }),
     }),
-    getUserById: builder.query<User, { id: string }>({
-        query: ({ id }) => ({
-          url: `users/${id}`, // Return query object with url and method
-          method: 'GET',
-        }),
-      }),
   }),
 });
 
-export const { useGetUsersQuery, useGetUserByIdQuery } = builderApi;
+export const { useGetBuilderQuery } = builderApi;
