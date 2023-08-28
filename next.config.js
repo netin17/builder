@@ -2,7 +2,12 @@
 const nextConfig = {
     images: {
         domains: ['estateon.com'], // Add your local domain here
-        formats: ["image/webp"],
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'estateon.com',
+          },
+        ],
       },
 }
 
