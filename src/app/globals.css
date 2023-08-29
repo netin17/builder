@@ -48,7 +48,7 @@ body {
   color: var(--theme-color);
 }
 
-.btn-create-profile-btn{
+.create-profile-btn{
   border-radius: 4px;
   background: linear-gradient(160deg, #F6D921 0%, #CEA230 28.65%, #F6D921 65.63%, #CD994A 100%);
   width: 218px;
@@ -57,7 +57,7 @@ body {
   border: none;
   margin: 0 37px;
 }
-.btn-login-btn{
+.login-btn{
   display: inline-flex;
   padding: 12px 50px;
   justify-content: center;
@@ -380,6 +380,7 @@ h4.service-title {
   list-style: none;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .best-collection ul li {
