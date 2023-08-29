@@ -56,6 +56,9 @@ body {
   flex-shrink: 0;
   border: none;
   margin: 0 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .login-btn{
   display: inline-flex;
@@ -65,10 +68,10 @@ body {
   height: 42px;
   gap: 10px;
   background: var(--theme-color);
-  color: var(--white);
+  color: var(--white) !important;
   border-radius: 4px;
 }
-.btn-login-btn:hover{
+.login-btn:hover{
   background: var(--theme-color);
 }
 
