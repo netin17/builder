@@ -269,7 +269,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
 return(
   <SwiperSlide key={property?.id}>
   <div className="properties_box">
-      <a href="#">
+  <a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`detail/${property?.property?.slug}`} target="_blank">
         <div className="properties_box_img">
 {property?.property?.images.length>0 && 
   <img src={property?.property?.images[0]?.url} alt="Vercel Logo" />

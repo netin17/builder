@@ -43,6 +43,7 @@ body {
   color: var(--black);
   padding-left: 18px;
   padding-right: 18px;
+  width: auto;
 }
 .custom-nav .navbar-nav .nav-link.active{
   color: var(--theme-color);
