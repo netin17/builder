@@ -43,7 +43,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
     <main>
         <Navbar expand="lg" className="bg-body-tertiary custom-nav">
           <Container>
-            <Navbar.Brand href={process.env.NEXT_PUBLIC_BASE_LIVE_URL} target='_blank'><img src="{'/logo.png'}" width={134} height={63} alt='logo-image'/></Navbar.Brand>
+            <Navbar.Brand href={process.env.NEXT_PUBLIC_BASE_LIVE_URL} target='_blank'><img src="/logo.png" width={134} height={63} alt='logo-image' /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
@@ -84,9 +84,14 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                               data?.msg?.builder?.company_name.charAt(0).toUpperCase() + data?.msg?.builder?.company_name.slice(1)
                             }</h1>
                            <div dangerouslySetInnerHTML={{ __html: data?.msg?.builder?.details?.description }} />
-                            <a href='#'>
-                              <Image  src="/play.svg" alt="Vercel Logo" className="dark:invert" width={24} height={24} priority />
-                              Play Portfolio</a>
+                            {data?.msg?.builder?.details?.portfolio && 
+                            <a href={data?.msg?.builder?.details?.portfolio} target='_blank'>
+                            <Image  src="/play.svg" alt="Vercel Logo" className="dark:invert" width={24} height={24} priority />
+                            Play Portfolio
+                            </a>
+                            }
+                            
+
                         </div>
                     </div>
                     <div className='col-12 col-md-6'>
@@ -470,7 +475,7 @@ return(
             <div className='row'>
               <div className='col-12 col-md-3'>
                 <div className='footer-box'>
-                  <a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL} target='_blank'><img src="{'/logo.png'}" width={134} height={63} alt='logo-image'/></a>
+                  <a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL} target='_blank'><img src="/logo.png" width={134} height={63} alt='logo-image'/></a>
                   <p>We’re reimagining how you buy, sell and rent. It’s now easier to get into a place 
                     you love. So let’s do this, together</p>
                 </div>
