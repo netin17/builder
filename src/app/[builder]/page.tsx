@@ -305,8 +305,9 @@ return(
             <h6>{property?.property?.property_details?.city?.name}</h6>
             <div className="properties_area">{property?.property?.property_details?.carpet_area} sq.ft</div>
           </div>
-          {property?.property?.amenities.length>0 && 
+          
           <div className="properties_box_items">
+          {property?.property?.amenities.length>0 && 
           <ul>
             {property?.property?.amenities?.map((aminity:any)=>{
               return (
@@ -315,9 +316,10 @@ return(
             })}
             
           </ul>
+           }
           <div className="properties_price">{formatPrice(property?.property?.property_details?.price)}</div>
         </div>
-          }
+         
           
 
         </div>
