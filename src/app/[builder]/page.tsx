@@ -63,10 +63,9 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
   <p>Oh no, there was an error</p>
 ): isLoading || isFetching ? (
   <p>Loading...</p>
-): data ? (
-  <>
-  
-    <div>
+): data ? ( data?.code==101 ? (
+<>
+  <div>
     <section className='banner-main'>
             <div className='container'>
                 <div className='row d-flex align-items-center'>
@@ -469,6 +468,12 @@ return(
 
   
   </>
+): (
+<div>
+  Builder {builderSlug} not found.
+</div>
+)
+  
 ): null }
         
 
