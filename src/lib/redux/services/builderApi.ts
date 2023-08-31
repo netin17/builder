@@ -19,7 +19,7 @@ const axiosBaseQuery = ({ baseUrl }: { baseUrl: string }) => async ({ url, metho
 
 export const builderApi = createApi({
   reducerPath: 'builderApi',
-  refetchOnFocus: true,
+  refetchOnFocus: false,
   baseQuery: axiosBaseQuery({
     baseUrl: process.env.NEXT_PUBLIC_BASE_URL!,
   }),
