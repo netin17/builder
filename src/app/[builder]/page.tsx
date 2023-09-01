@@ -48,7 +48,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
                 <Nav.Link href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`list`} target='_blank'>Local Properties</Nav.Link>
-                <Nav.Link href="#">Explore Our Builders</Nav.Link>
+                {/* <Nav.Link href="#">Explore Our Builders</Nav.Link> */}
                 <Nav.Link href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`signin`} target='_blank' className='active'>Post Property Free</Nav.Link>
               </Nav>
               <Nav className="ms-auto">
