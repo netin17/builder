@@ -50,8 +50,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                 <Nav.Link href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`list`} target='_blank'>Local Properties</Nav.Link>
                 {/* <Nav.Link href="#">Explore Our Builders</Nav.Link> */}
                 <Nav.Link href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`signin`} target='_blank' className='active'>Post Property Free</Nav.Link>
-              </Nav>
-              <Nav className="ms-auto">
+              
                 <Nav.Link className='create-profile-btn' href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`frontuser/property`} target='_blank'>Create Your Builder Profile</Nav.Link>
                 <Nav.Link className='login-btn'  href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`frontuser/property`} target='_blank'>Login</Nav.Link>
             </Nav>
@@ -116,6 +115,18 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                           <div className='ongoing-project'>
                             <h4>{data?.msg?.builder?.details?.running_projects}</h4>
                             <span>ONGOING PROJECTS</span>
+                          </div>
+                          <div className='ongoing-project total-experience'>
+                            <h4>{data?.msg?.builder?.details?.running_projects}</h4>
+                            <span>TOTAL EXPERIENCE</span>
+                          </div>
+                          <div className='ongoing-project total-project'>
+                            <h4>{data?.msg?.builder?.details?.running_projects}</h4>
+                            <span>TOTAL PROJECTS</span>
+                          </div>
+                          <div className='ongoing-project completed-delivered'>
+                            <h4>{data?.msg?.builder?.details?.running_projects}</h4>
+                            <span>COMPLETED/DELIVERED</span>
                           </div>
                         </div>
                     </div>
@@ -444,7 +455,7 @@ return(
                     <h3>Find The Perfect Loan For You</h3>
                     <p>Find your cheapest loan in minutes then click to apply instantly. It&apos;s free and won&apos;t 
                       affect your credit score.</p>
-                      <button type="button" className="btn btn-login-btn">Compare Loan</button>
+                      <button type="button" className="btn btn-compare-loan">Compare Loan</button>
                   </div>
                   <div className='col-12 col-md-6'>
                     <img src={'/perfect-loan.svg'} />

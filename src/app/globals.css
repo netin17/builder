@@ -44,6 +44,8 @@ body {
   padding-left: 18px;
   padding-right: 18px;
   width: auto;
+  display: flex;
+  align-items: center;
 }
 .custom-nav .navbar-nav .nav-link.active{
   color: var(--theme-color);
@@ -234,6 +236,23 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+.ongoing-project.total-experience {
+  top: -40px;
+  bottom: inherit;
+}
+
+.ongoing-project.total-project {
+  top: 80px;
+  bottom: inherit;
+  left: -50px;
+  right: inherit;
+}
+
+.ongoing-project.completed-delivered {
+  left: inherit;
+  bottom: 140px;
+}
+
 .quote-sec {
   background: #FFF7C3;
   padding: 88px 0;
@@ -630,7 +649,7 @@ section.perfect-loan p {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  text-decoration-line: underline;
+  text-decoration-line: underline !important;
   text-decoration: none;
 }
 .contact-box p {
@@ -715,6 +734,10 @@ footer{
   padding: 20px 0;
   border-top: 1px solid #000;
   margin-top: 30px;
+}
+.btn-compare-loan {
+  background: #B8DBFF;
+  color: #000;
 }
 
 @media (max-width: 575.98px) {
