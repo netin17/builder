@@ -239,6 +239,8 @@ body {
 .ongoing-project.total-experience {
   top: -40px;
   bottom: inherit;
+  border-radius: 6px;
+  border: none;
 }
 
 .ongoing-project.total-project {
@@ -246,11 +248,16 @@ body {
   bottom: inherit;
   left: -50px;
   right: inherit;
+  background: transparent;
+  border: none;
+  backdrop-filter: blur(0px);
 }
 
 .ongoing-project.completed-delivered {
   left: inherit;
-  bottom: 140px;
+  bottom: 50%;
+  border-radius: 6px;
+  border: none;
 }
 
 .quote-sec {
