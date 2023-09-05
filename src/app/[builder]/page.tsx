@@ -117,15 +117,15 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                             <span>ONGOING PROJECTS</span>
                           </div>
                           <div className='ongoing-project total-experience'>
-                            <h4>{data?.msg?.builder?.details?.running_projects}</h4>
+                            <h4>{data?.msg?.builder?.details?.total_experience}</h4>
                             <span>TOTAL EXPERIENCE</span>
                           </div>
                           <div className='ongoing-project total-project'>
-                            <h4>{data?.msg?.builder?.details?.running_projects}</h4>
+                            <h4>{data?.msg?.builder?.details?.total_projects}</h4>
                             <span>TOTAL PROJECTS</span>
                           </div>
                           <div className='ongoing-project completed-delivered'>
-                            <h4>{data?.msg?.builder?.details?.running_projects}</h4>
+                            <h4>{data?.msg?.builder?.details?.completed_projects}</h4>
                             <span>COMPLETED/DELIVERED</span>
                           </div>
                         </div>
