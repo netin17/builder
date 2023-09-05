@@ -217,6 +217,7 @@ body {
   left: 0;
   margin: auto;
   bottom: -52px;
+  text-transform: uppercase;
 }
 
 .ongoing-project h4 {
@@ -255,7 +256,8 @@ body {
 
 .ongoing-project.completed-delivered {
   left: inherit;
-  bottom: 50%;
+  right: -50px;
+  bottom: 40%;
   border-radius: 6px;
   border: none;
 }

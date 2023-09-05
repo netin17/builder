@@ -126,7 +126,7 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
                           </div>
                           <div className='ongoing-project completed-delivered'>
                             <h4>{data?.msg?.builder?.details?.completed_projects}</h4>
-                            <span>COMPLETED/DELIVERED</span>
+                            <span>Completed Projects</span>
                           </div>
                         </div>
                     </div>
@@ -449,15 +449,16 @@ return(
         <section className='perfect-loan py-4 py-md-5'>
           <div className='container'>
             <div className='row'>
-              <div className='col-12 col-md-8 m-auto'>
-                <div className='row g-3'>
-                  <div className='col-12 col-md-6'>
+              <div className='col-12 col-md-11 m-auto'>
+                <div className='row g-3 d-flex align-items-center w-100'>
+                  <div className='col-12 col-md-5'>
                     <h3>Find The Perfect Loan For You</h3>
                     <p>Find your cheapest loan in minutes then click to apply instantly. It&apos;s free and won&apos;t 
                       affect your credit score.</p>
                       <button type="button" className="btn btn-compare-loan">Compare Loan</button>
                   </div>
-                  <div className='col-12 col-md-6'>
+                  <div className='col-12 col-md-2'></div>
+                  <div className='col-12 col-md-5'>
                     <img src={'/perfect-loan.svg'} />
                   </div>
                 </div>
