@@ -791,4 +791,26 @@ footer{
   .contact-box h3 {
     font-size: 28px;
   }
+  .ongoing-project {
+    width: 140px;
+    padding: 10px;
+    height: auto;
+  }
+  .ongoing-project.total-project {
+    top: 55px;
+    left: 0;
+  }
+  .ongoing-project.completed-delivered {
+    right: 0;
+    bottom: 20%;
+  }
+  .high-demands {
+    top: 22%;
+  }
+  .ongoing-project.total-experience {
+    left: inherit;
+  }
+  .create-profile-btn {
+    margin: 0 0 10px 0;
+  }
 }
