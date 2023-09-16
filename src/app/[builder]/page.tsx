@@ -47,9 +47,9 @@ const BuilderPage = ({params}:{params: {builder:string}}) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
-                <Nav.Link href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`list`} target='_blank'>Local Properties</Nav.Link>
+                <Nav.Link href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`property-list`} target='_blank'>Local Properties</Nav.Link>
                 {/* <Nav.Link href="#">Explore Our Builders</Nav.Link> */}
-                <Nav.Link href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`signin`} target='_blank' className='active'>Post Property Free</Nav.Link>
+                <Nav.Link href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`sign-in`} target='_blank' className='active'>Post Property Free</Nav.Link>
               
                 <Nav.Link className='create-profile-btn' href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`frontuser/property`} target='_blank'>Create Your Builder Profile</Nav.Link>
                 <Nav.Link className='login-btn'  href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`frontuser/property`} target='_blank'>Login</Nav.Link>
@@ -504,8 +504,8 @@ return(
                 <div className='footer-box'>
                   <ul>
                     <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL} target='_blank'>Home</a></li>
-                    <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`aboutus`} target='_blank'>About Us</a></li>
-                    <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`list`} target='_blank'>Properties</a></li>
+                    <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`about-us`} target='_blank'>About Us</a></li>
+                    <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`property-list`} target='_blank'>Properties</a></li>
                     {/* <li><a href='#'>More</a></li> */}
                   </ul>
                 </div>
@@ -514,7 +514,7 @@ return(
               <div className='col-12 col-md-3'>
                 <div className='footer-box'>
                   <ul>
-                    <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`list`} target='_blank'>Local Properties</a></li>
+                    <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`property-list`} target='_blank'>Local Properties</a></li>
                     <li><a href='#'>Explore Our Builders</a></li>
                     <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`frontuser/property`} target='_blank'>Post Property Free</a></li>
                     <li><a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL+`frontuser/property`} target='_blank'>Create Your Builder Profile</a></li>
