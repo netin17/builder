@@ -495,8 +495,8 @@ return(
               <div className='col-12 col-md-3'>
                 <div className='footer-box'>
                   <a href={process.env.NEXT_PUBLIC_BASE_LIVE_URL} target='_blank'><img src="/logo.png" width={134} height={63} alt='logo-image'/></a>
-                  <p>We’re reimagining how you buy, sell and rent. It’s now easier to get into a place 
-                    you love. So let’s do this, together</p>
+                  <p>We&apos;re reimagining how you buy, sell and rent. It&apos;s now easier to get into a place 
+                    you love. So let&apos;s do this, together</p>
                 </div>
               </div>
 
